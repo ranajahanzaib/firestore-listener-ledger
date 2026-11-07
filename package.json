@@ -1,0 +1,44 @@
+{
+  "name": "listenerledger",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm dev:dashboard",
+    "dev:dashboard": "vite apps/dashboard --host 127.0.0.1",
+    "dev:demo": "vite apps/demo --port 5174 --host 127.0.0.1",
+    "emulator": "firebase emulators:start --config firebase.demo.json --only firestore --project demo-listenerledger",
+    "demo:reset": "tsx scripts/seed.ts",
+    "test": "vitest run packages",
+    "test:integration": "firebase emulators:exec --config firebase.demo.json --only firestore --project demo-listenerledger 'vitest run tests/integration'",
+    "test:e2e": "firebase emulators:exec --config firebase.demo.json --only firestore --project demo-listenerledger 'playwright test'",
+    "typecheck": "tsc --noEmit",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "build": "pnpm -r build && vite build apps/dashboard && vite build apps/demo",
+    "cli": "tsx packages/cli/src/index.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "firebase-tools": "^15.34.2",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "firebase": "^12.5.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^3.25.76"
+  }
+}

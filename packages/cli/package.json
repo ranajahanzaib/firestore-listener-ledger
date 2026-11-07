@@ -1,0 +1,31 @@
+{
+  "name": "@listenerledger/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@listenerledger/core": "workspace:*",
+    "commander": "^14.0.2"
+  },
+  "bin": {
+    "listenerledger": "dist/index.js"
+  },
+  "license": "MIT",
+  "description": "Analyze ListenerLedger traces and assert modeled read budgets",
+  "engines": {
+    "node": ">=22"
+  }
+}

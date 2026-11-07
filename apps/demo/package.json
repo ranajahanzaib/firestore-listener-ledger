@@ -1,0 +1,9 @@
+{
+  "name": "@listenerledger/demo",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@listenerledger/core": "workspace:*",
+    "@listenerledger/firestore-web": "workspace:*"
+  }
+}

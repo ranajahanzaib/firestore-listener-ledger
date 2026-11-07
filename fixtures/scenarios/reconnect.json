@@ -1,0 +1,10 @@
+{
+  "dau": 500,
+  "sessionsPerUser": 2,
+  "budget": 50000,
+  "persistence": "persistent",
+  "reconnectCount": 1,
+  "reconnectMinutes": 31,
+  "scenario": "baseline",
+  "additionalReads": 0
+}

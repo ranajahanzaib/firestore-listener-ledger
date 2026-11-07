@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "toolVersion": "0.1.0",
+  "generatedAt": 1780000000800,
+  "sessions": ["synthetic-session"],
+  "persistence": "memory",
+  "environment": "emulator",
+  "capture": "metadata-only",
+  "start": 1780000000100,
+  "end": 1780000000800,
+  "droppedEvents": 0,
+  "synthetic": true,
+  "events": [
+    {
+      "type": "session_started",
+      "at": 1780000000100,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_entered",
+      "screen": "Inbox",
+      "at": 1780000000200,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_subscribed",
+      "listenerId": "listener-0",
+      "queryKey": "inbox.recent",
+      "label": "Recent conversations",
+      "screen": "Inbox",
+      "kind": "query",
+      "background": false,
+      "at": 1780000000300,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-0",
+      "size": 24,
+      "added": 24,
+      "modified": 0,
+      "removed": 0,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": true,
+      "metadataOnly": false,
+      "at": 1780000000400,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-0",
+      "size": 23,
+      "added": 0,
+      "modified": 3,
+      "removed": 1,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": false,
+      "metadataOnly": false,
+      "at": 1780000000500,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_unsubscribed",
+      "listenerId": "listener-0",
+      "at": 1780000000600,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "network_hint",
+      "state": "offline",
+      "at": 1780000000700,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "session_ended",
+      "at": 1780000000800,
+      "sessionId": "synthetic-session"
+    }
+  ]
+}

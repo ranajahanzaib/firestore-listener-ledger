@@ -1,0 +1,8 @@
+node_modules
+pnpm-lock.yaml
+dist
+**/dist
+.firebase
+*-debug.log
+test-results
+playwright-report

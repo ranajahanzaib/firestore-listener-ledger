@@ -1,0 +1,7 @@
+// Emulator-only: loaded by firebase.demo.json. Never deploy these rules.
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  match /demo/{document=**} { allow read, write: if true; }
+ }
+}

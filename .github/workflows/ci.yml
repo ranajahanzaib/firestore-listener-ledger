@@ -1,33 +1,40 @@
-name: CI
-
+name: Quality
 on:
   push:
-    branches: [main]
   pull_request:
-    branches: [main]
-
+permissions:
+  contents: read
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: 20
-
-      # Uncomment and adjust the steps below to match your project's setup
-
-      # - name: Install dependencies
-      #   run: npm ci
-
-      # - name: Lint
-      #   run: npm run lint
-
-      # - name: Run tests
-      #   run: npm test
-
-      # - name: Build
-      #   run: npm run build
+          version: 10.20.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm test:integration
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:e2e
+      - run: node packages/cli/dist/index.js validate fixtures/traces/efficient.json
+      - run: node packages/cli/dist/index.js analyze fixtures/traces/efficient.json --format json --out /tmp/report.json
+      - run: node packages/cli/dist/index.js report /tmp/report.json --out /tmp/report.html
+      - name: Assert modeled budget failure code
+        run: |
+          set +e
+          node packages/cli/dist/index.js analyze fixtures/traces/churn.json --dau 500 --sessions-per-user 2 --budget 50000 --fail-on-budget
+          result=$?
+          test "$result" -eq 2

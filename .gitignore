@@ -72,3 +72,8 @@ yarn-error.log*
 
 # Python
 venv
+
+# Browser verification
+playwright-report/
+test-results/
+*.tgz

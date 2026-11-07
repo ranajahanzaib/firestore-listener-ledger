@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "toolVersion": "0.1.0",
+  "generatedAt": 1780000003800,
+  "sessions": ["synthetic-session"],
+  "persistence": "memory",
+  "environment": "emulator",
+  "capture": "metadata-only",
+  "start": 1780000000100,
+  "end": 1780000003800,
+  "droppedEvents": 0,
+  "synthetic": true,
+  "events": [
+    {
+      "type": "session_started",
+      "at": 1780000000100,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_entered",
+      "screen": "Inbox",
+      "at": 1780000000200,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_subscribed",
+      "listenerId": "listener-0",
+      "queryKey": "inbox.recent",
+      "label": "Recent conversations",
+      "screen": "Inbox",
+      "kind": "query",
+      "background": false,
+      "at": 1780000000300,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-0",
+      "size": 24,
+      "added": 24,
+      "modified": 0,
+      "removed": 0,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": true,
+      "metadataOnly": false,
+      "at": 1780000000400,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-0",
+      "size": 23,
+      "added": 0,
+      "modified": 3,
+      "removed": 1,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": false,
+      "metadataOnly": false,
+      "at": 1780000000500,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_exited",
+      "screen": "Inbox",
+      "at": 1780000000600,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_unsubscribed",
+      "listenerId": "listener-0",
+      "at": 1780000000700,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_entered",
+      "screen": "Inbox",
+      "at": 1780000000800,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_subscribed",
+      "listenerId": "listener-1",
+      "queryKey": "inbox.recent",
+      "label": "Recent conversations",
+      "screen": "Inbox",
+      "kind": "query",
+      "background": false,
+      "at": 1780000000900,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-1",
+      "size": 24,
+      "added": 24,
+      "modified": 0,
+      "removed": 0,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": true,
+      "metadataOnly": false,
+      "at": 1780000001000,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-1",
+      "size": 23,
+      "added": 0,
+      "modified": 3,
+      "removed": 1,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": false,
+      "metadataOnly": false,
+      "at": 1780000001100,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_exited",
+      "screen": "Inbox",
+      "at": 1780000001200,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_unsubscribed",
+      "listenerId": "listener-1",
+      "at": 1780000001300,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_entered",
+      "screen": "Inbox",
+      "at": 1780000001400,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_subscribed",
+      "listenerId": "listener-2",
+      "queryKey": "inbox.recent",
+      "label": "Recent conversations",
+      "screen": "Inbox",
+      "kind": "query",
+      "background": false,
+      "at": 1780000001500,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-2",
+      "size": 24,
+      "added": 24,
+      "modified": 0,
+      "removed": 0,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": true,
+      "metadataOnly": false,
+      "at": 1780000001600,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-2",
+      "size": 23,
+      "added": 0,
+      "modified": 3,
+      "removed": 1,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": false,
+      "metadataOnly": false,
+      "at": 1780000001700,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_exited",
+      "screen": "Inbox",
+      "at": 1780000001800,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_unsubscribed",
+      "listenerId": "listener-2",
+      "at": 1780000001900,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_entered",
+      "screen": "Inbox",
+      "at": 1780000002000,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_subscribed",
+      "listenerId": "listener-3",
+      "queryKey": "inbox.recent",
+      "label": "Recent conversations",
+      "screen": "Inbox",
+      "kind": "query",
+      "background": false,
+      "at": 1780000002100,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-3",
+      "size": 24,
+      "added": 24,
+      "modified": 0,
+      "removed": 0,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": true,
+      "metadataOnly": false,
+      "at": 1780000002200,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-3",
+      "size": 23,
+      "added": 0,
+      "modified": 3,
+      "removed": 1,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": false,
+      "metadataOnly": false,
+      "at": 1780000002300,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_exited",
+      "screen": "Inbox",
+      "at": 1780000002400,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_unsubscribed",
+      "listenerId": "listener-3",
+      "at": 1780000002500,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_entered",
+      "screen": "Inbox",
+      "at": 1780000002600,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_subscribed",
+      "listenerId": "listener-4",
+      "queryKey": "inbox.recent",
+      "label": "Recent conversations",
+      "screen": "Inbox",
+      "kind": "query",
+      "background": false,
+      "at": 1780000002700,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-4",
+      "size": 24,
+      "added": 24,
+      "modified": 0,
+      "removed": 0,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": true,
+      "metadataOnly": false,
+      "at": 1780000002800,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-4",
+      "size": 23,
+      "added": 0,
+      "modified": 3,
+      "removed": 1,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": false,
+      "metadataOnly": false,
+      "at": 1780000002900,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_exited",
+      "screen": "Inbox",
+      "at": 1780000003000,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_unsubscribed",
+      "listenerId": "listener-4",
+      "at": 1780000003100,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_entered",
+      "screen": "Inbox",
+      "at": 1780000003200,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_subscribed",
+      "listenerId": "listener-5",
+      "queryKey": "inbox.recent",
+      "label": "Recent conversations",
+      "screen": "Inbox",
+      "kind": "query",
+      "background": false,
+      "at": 1780000003300,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-5",
+      "size": 24,
+      "added": 24,
+      "modified": 0,
+      "removed": 0,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": true,
+      "metadataOnly": false,
+      "at": 1780000003400,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "snapshot_observed",
+      "listenerId": "listener-5",
+      "size": 23,
+      "added": 0,
+      "modified": 3,
+      "removed": 1,
+      "fromCache": false,
+      "hasPendingWrites": false,
+      "first": false,
+      "metadataOnly": false,
+      "at": 1780000003500,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "screen_exited",
+      "screen": "Inbox",
+      "at": 1780000003600,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "listener_unsubscribed",
+      "listenerId": "listener-5",
+      "at": 1780000003700,
+      "sessionId": "synthetic-session"
+    },
+    {
+      "type": "session_ended",
+      "at": 1780000003800,
+      "sessionId": "synthetic-session"
+    }
+  ]
+}
