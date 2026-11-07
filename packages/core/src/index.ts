@@ -51,7 +51,7 @@ export const eventSchema = z.discriminatedUnion("type", [
     ...base,
     type: z.literal("custom_marker"),
     name: text,
-    details: z.record(text).optional(),
+    details: z.record(z.string(), text).optional(),
   }),
 ]);
 export type LedgerEvent = z.infer<typeof eventSchema>;
@@ -72,13 +72,18 @@ export const traceSchema = z
   })
   .superRefine((t, c) => {
     if (t.end < t.start)
-      c.addIssue({ code: "custom", message: "Trace end precedes start" });
+      c.addIssue({
+        code: "custom",
+        input: t.end,
+        message: "Trace end precedes start",
+      });
     const active = new Set<string>();
     let prev = t.start;
     for (const [i, e] of t.events.entries()) {
       if (e.at < prev || e.at > t.end || !t.sessions.includes(e.sessionId))
         c.addIssue({
           code: "custom",
+          input: e,
           path: ["events", i],
           message:
             "Events must be ordered, within range, and reference a declared session",
@@ -88,6 +93,7 @@ export const traceSchema = z
         if (active.has(e.listenerId))
           c.addIssue({
             code: "custom",
+            input: e,
             path: ["events", i],
             message: "Duplicate listener ID",
           });
@@ -99,6 +105,7 @@ export const traceSchema = z
       )
         c.addIssue({
           code: "custom",
+          input: e,
           path: ["events", i],
           message: "Listener event without subscription",
         });
